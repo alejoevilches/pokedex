@@ -1,0 +1,59 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+@font-face {
+    font-family: "Pokemon Main Font";
+    src: url(/src/fonts/pokefont.ttf);
+}
+
+@font-face {
+    font-family: "Pokemon GameBoy Font";
+    src: url(/src/fonts/pokemon-gbfont.ttf);
+}
+
+:root{
+    --pokemon-yellow:yellow;
+    --pokemon-main-fomt:"Pokemon Main Font";
+    --pokemon-gameboy-font:"Pokemon GameBoy Font";
+}
+
+body{
+    background-color: var(--pokemon-yellow);
+}
+
+h1{
+    font-family: var(--pokemon-main-fomt);
+    font-size:4rem;
+    padding:10px 0;
+    color:var(--pokemon-yellow);
+    letter-spacing: 3px;
+    -webkit-text-stroke: 2px;
+    -webkit-text-stroke-color: blue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:12vh;
+}
+
+nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 2vw;
+}
+
+#favs, #select_types{
+    background-color: var(--pokemon-yellow);
+    font-family: var(--pokemon-gameboy-font);
+    width: max-content;
+    padding:10px;
+}
+
+#favs{
+    border:1px solid black;
+    border-radius: 10px;
+    height:35px;
+}

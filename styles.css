@@ -60,6 +60,30 @@ nav{
 
 .card{
     border:2px solid black;
-    max-width:20vw;
-    width: max-content;
+    max-width:200px;
+    width: 100%;
+    margin-left: 2vw;
+}
+
+.card_header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pokemon-gameboy-font);
+    font-size:0.7em;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    padding-bottom:5px;
+}
+
+.pokemon_info{
+    display:flex;
+    flex-wrap: wrap;
+    font-size:0.8em;
+    font-family: var(--pokemon-gameboy-font);
+}
+
+.pokemon_stat{
+    font-size:1em;
 }

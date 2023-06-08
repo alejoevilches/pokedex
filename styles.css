@@ -1,6 +1,7 @@
 *{
     padding:0;
     margin:0;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -77,6 +78,10 @@ nav{
     padding-bottom:5px;
 }
 
+#pokemon_type{
+    padding-top:5px;
+}
+
 .pokemon_info{
     display:flex;
     flex-wrap: wrap;
@@ -86,4 +91,5 @@ nav{
 
 .pokemon_stat{
     font-size:1em;
+    padding:10px 20px;
 }

@@ -17,44 +17,46 @@ const getAllPokemons=async()=>{
   for (let i = 1; i <= amountOfPokemons; i++) {
     const pokemon=await fetchURL(i)
     pokemons.push(pokemon)
-  }
-  showPokemons()
+  };
+  console.log(pokemons[0].stats);
+  showPokemons(pokemons);
 }
 
-const showPokemons=async()=>{
-  console.log(pokemons);
+const showPokemons=async(pokemons)=>{
   pokemons.forEach(pokemon => {
+    let types=getPokemonTypes(pokemon);
     let card=`
     <article class="card">
+            <box-icon name='heart' type='solid' color='#fb0106' ></box-icon>
             <section class="card_header">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" alt="Ditto">
+                <img src="${pokemon.sprites.front_shiny}" alt="Ditto">
                 <h2 class="card_title">${pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</h2>
-                <p id="pokemon_type">Normal</p>
+                <p class="pokemon_types" id="pokemon_type">${types}</p>
             </section>
             <section class="pokemon_info">
                 <div class="pokemon_stat">
                     <p class="pokemon_info_title">HP</p>
-                    <p id="hp">45</p>
+                    <p class="pokemon_stat" id="hp">${pokemon.stats[0].base_stat}</p>
                 </div>
                 <div class="pokemon_stat">
-                    <p class="pokemon_info_title">HP</p>
-                    <p id="hp">45</p>
+                    <p class="pokemon_info_title">Ataque</p>
+                    <p class="pokemon_stat" id="attack">${pokemon.stats[1].base_stat}</p>
                 </div>
                 <div class="pokemon_stat">
-                    <p class="pokemon_info_title">HP</p>
-                    <p id="hp">45</p>
+                    <p class="pokemon_info_title">Defensa</p>
+                    <p class="pokemon_stat" id="defense">${pokemon.stats[2].base_stat}</p>
                 </div>
                 <div class="pokemon_stat">
-                    <p class="pokemon_info_title">HP</p>
-                    <p id="hp">45</p>
+                    <p class="pokemon_info_title">Ataque especial</p>
+                    <p class="pokemon_stat" id="hp">${pokemon.stats[3].base_stat}</p>
                 </div>
                 <div class="pokemon_stat">
-                    <p class="pokemon_info_title">HP</p>
-                    <p id="hp">45</p>
+                    <p class="pokemon_info_title">Defensa especial</p>
+                    <p class="pokemon_stat" id="hp">${pokemon.stats[4].base_stat}</p>
                 </div>
                 <div class="pokemon_stat">
-                    <p class="pokemon_info_title">HP</p>
-                    <p id="hp">45</p>
+                    <p class="pokemon_info_title">Velocidad</p>
+                    <p class="pokemon_stat" id="hp">${pokemon.stats[5].base_stat}</p>
                 </div>
             </section>
         </article>
@@ -62,6 +64,13 @@ const showPokemons=async()=>{
     cardContainer.innerHTML+=card;
   });
 }
+
+const getPokemonTypes=(pokemon)=>{
+  return pokemon.types.map(type=>{
+    return type.type.name
+  })
+}
+
 
 getAllPokemons();
 

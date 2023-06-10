@@ -29,7 +29,7 @@ const showPokemons=async(pokemons)=>{
     let types=getPokemonTypes(pokemon);
     let card=`
     <article class="card">
-            <box-icon name='heart' type='solid' color='#fb0106' ></box-icon>
+            <box-icon id="${pokemon.name}" name='heart' type='solid' color='#fb0106' ></box-icon>
             <section class="card_header">
                 <img src="${pokemon.sprites.front_shiny}" alt="Ditto">
                 <h2 class="card_title">${pokemon.name.charAt(0).toUpperCase()+pokemon.name.slice(1)}</h2>
@@ -74,3 +74,5 @@ const getPokemonTypes=(pokemon)=>{
 }
 
 getAllPokemons();
+
+export default pokemons;

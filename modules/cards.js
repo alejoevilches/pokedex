@@ -1,6 +1,6 @@
 import createEvents from "/modules/storage.js";
 
-const amountOfPokemons=256;
+const amountOfPokemons=128;
 const cardContainer=document.querySelector(".container");
 const pokemons=[];
 
@@ -75,4 +75,4 @@ const getPokemonTypes=(pokemon)=>{
 
 getAllPokemons();
 
-export default pokemons;
+export { pokemons, showPokemons };

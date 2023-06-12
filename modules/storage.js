@@ -1,7 +1,8 @@
-import pokemons from "/modules/cards.js";
+import { pokemons, showPokemons } from "/modules/cards.js";
 const favourites=[]
 const favsButton=document.querySelector("#favs");
 const cardContainer=document.querySelector(".container")
+let isFavsOpen=false;
 console.log(favsButton);
 
 const createEvents=()=>{
@@ -25,6 +26,13 @@ const deletePokemonFav=(match)=>{
 
 const showFavourites=()=>{
     cardContainer.innerHTML="";
+    if (isFavsOpen){
+        showPokemons(pokemons);
+        isFavsOpen=false
+    } else {
+        showPokemons(favourites);
+        isFavsOpen=true;
+    }
 }
 
 favsButton.addEventListener("click", showFavourites);

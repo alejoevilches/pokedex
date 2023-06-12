@@ -9,11 +9,9 @@ const createEvents=()=>{
     likeButtons.forEach(button=>{
         button.addEventListener("click", handleLikeClick);
     })
-    console.log(likeButtons);
 }
 
 const handleLikeClick=(e)=>{
-    console.log(e);
     let match=pokemons.find(pokemon=>pokemon.name==e.target.id);
     favourites.some(pokemon=>pokemon.name==match.name) ? deletePokemonFav(match) : favourites.push(match);
     localStorage.setItem("pokemons", JSON.stringify(favourites));

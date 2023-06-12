@@ -1,6 +1,6 @@
 import createEvents from "/modules/storage.js";
 
-const amountOfPokemons=10;
+const amountOfPokemons=50;
 const cardContainer=document.querySelector(".container");
 const pokemons=[];
 
@@ -20,6 +20,7 @@ const getAllPokemons=async()=>{
     const pokemon=await fetchURL(i)
     pokemons.push(pokemon)
   };
+  console.log(pokemons);
   showPokemons(pokemons);
   createEvents();
 }
@@ -75,4 +76,4 @@ const getPokemonTypes=(pokemon)=>{
 
 getAllPokemons();
 
-export { pokemons, showPokemons };
+export { pokemons, showPokemons, getPokemonTypes };

@@ -1,6 +1,6 @@
 import createEvents from "/modules/storage.js";
 
-const amountOfPokemons=128;
+const amountOfPokemons=10;
 const cardContainer=document.querySelector(".container");
 const pokemons=[];
 

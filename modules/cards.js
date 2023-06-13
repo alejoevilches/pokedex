@@ -20,12 +20,12 @@ const getAllPokemons=async()=>{
     const pokemon=await fetchURL(i)
     pokemons.push(pokemon)
   };
-  console.log(pokemons);
   showPokemons(pokemons);
   createEvents();
 }
 
 const showPokemons=async(pokemons)=>{
+  cardContainer.innerHTML="";
   pokemons.forEach(pokemon => {
     let types=getPokemonTypes(pokemon);
     let card=`

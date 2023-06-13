@@ -112,6 +112,7 @@ nav{
     font-family: var(--pokemon-gameboy-font);
     width: max-content;
     padding:10px;
+    color:black;
 }
 
 #favs{

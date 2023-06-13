@@ -190,3 +190,20 @@ nav{
         flex-wrap: wrap;;
     }
 }
+
+@media screen and (max-width:400px) {
+    h1{
+        font-size:2em;
+    }    
+
+    #select_bar{
+        display:flex;
+        flex-wrap: wrap;
+        width:100px;
+    }
+
+    #favs{
+        width:min-content;
+        font-size: 0.5em;
+    }
+}

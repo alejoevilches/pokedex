@@ -2,6 +2,8 @@
 
 A Pokedex consuming the PokeAPI service made entirely in Vanilla Javascript with no frameworks or boilerplates, created by [Alejo Vilches](https://www.linkedin.com/in/alejo-ezequiel-vilches-189b3277/).
 
+![Screenshot of the app using three diferent resolutions](./images/screenshot.png)
+
 ## Demo
 
 You can test the app clicking [this link](https://pokedex-alejovilches.netlify.app)!

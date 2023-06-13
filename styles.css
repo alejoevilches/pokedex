@@ -166,6 +166,7 @@ nav{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content:space-around;
 }
 
 .pokemon_types{
@@ -174,4 +175,18 @@ nav{
 
 .pokemon_stat{
     text-align: center;
+}
+
+@media screen and (max-width:900px) {
+    h1{
+        font-size: 3em;
+        margin:0 10px;
+    }
+    
+    #favs{
+        font-size: 0.7em;
+        color:Red;
+        display:flex;
+        flex-wrap: wrap;;
+    }
 }

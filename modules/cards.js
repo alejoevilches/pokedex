@@ -3,6 +3,7 @@ import createEvents from "/modules/storage.js";
 const amountOfPokemons=50;
 const cardContainer=document.querySelector(".container");
 const pokemons=[];
+const loader=document.querySelector(".loader");
 
 const fetchURL=async(id)=>{
   try{
@@ -65,6 +66,7 @@ const showPokemons=async(pokemons)=>{
         </article>
     `
     cardContainer.innerHTML+=card;
+    loader.style.display="none";
   });
 }
 

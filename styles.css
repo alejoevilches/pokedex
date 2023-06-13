@@ -120,6 +120,10 @@ nav{
     height:35px;
 }
 
+#select_bar{
+    overflow: hidden;
+}
+
 .card{
     border:2px solid black;
     max-width:320px;
@@ -199,7 +203,7 @@ nav{
     #select_bar{
         display:flex;
         flex-wrap: wrap;
-        width:100px;
+        width:10px;
     }
 
     #favs{

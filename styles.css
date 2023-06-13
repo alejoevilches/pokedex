@@ -189,25 +189,39 @@ nav{
     
     #favs{
         font-size: 0.7em;
-        color:Red;
         display:flex;
         flex-wrap: wrap;;
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:505px) {
+    #select_bar{
+        width:80px;
+    }
+
     h1{
         font-size:2em;
     }    
+}
+
+@media screen and (max-width:400px) {
+
+    nav{
+        display:flex;
+        justify-content: space-between;
+
+    }
 
     #select_bar{
         display:flex;
         flex-wrap: wrap;
-        width:10px;
+        width:70px;
     }
 
     #favs{
-        width:min-content;
-        font-size: 0.5em;
+        width: fit-content;
+        display:flex;
+        align-content: center;
+        justify-content: center;
     }
 }

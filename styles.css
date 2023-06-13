@@ -119,6 +119,9 @@ nav{
     border:1px solid black;
     border-radius: 10px;
     height:35px;
+    display:flex;
+    align-content: center;
+    justify-content: center;
 }
 
 #select_bar{
@@ -221,8 +224,6 @@ nav{
 
     #favs{
         width: fit-content;
-        display:flex;
-        align-content: center;
-        justify-content: center;
     }
 }
+

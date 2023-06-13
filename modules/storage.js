@@ -40,7 +40,7 @@ const showFavourites=()=>{
 }
 
 const handleSetButtonText=()=>{
-    window.innerWidth<400 ? favsButton.innerHTML="<box-icon name='heart' type='solid' color='#fb0106'></box-icon>" : favsButton.textContent="Mis favoritos"
+    window.innerWidth<450 ? favsButton.innerHTML="<box-icon name='heart' type='solid' color='#fb0106'></box-icon>" : favsButton.textContent="Mis favoritos"
 }
 
 favsButton.addEventListener("click", showFavourites);

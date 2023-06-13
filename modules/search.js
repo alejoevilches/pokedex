@@ -1,4 +1,5 @@
 import { pokemons, showPokemons, getPokemonTypes } from "/modules/cards.js";
+import createEvents from "/modules/storage.js";
 
 const searchBar=document.querySelector("#select_bar");
 
@@ -14,8 +15,8 @@ const handleGetSelect=(e)=>{
         if (types.includes(selectedType)){
             typesArr.push(pokemon);
             showPokemons(typesArr);
+            createEvents();
         } else if (selectedType==="all"){
-            console.log("seleccionado")
             location.reload();
         }
     })

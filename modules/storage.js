@@ -1,8 +1,9 @@
 import { pokemons, showPokemons } from "/modules/cards.js";
-const favourites=[]
+let favourites=[]
 const favsButton=document.querySelector("#favs");
 const cardContainer=document.querySelector(".container")
 let isFavsOpen=false;
+
 
 const createEvents=()=>{
     const likeButtons=document.querySelectorAll("box-icon");
@@ -12,6 +13,8 @@ const createEvents=()=>{
 }
 
 const handleLikeClick=(e)=>{
+    const storedData=localStorage.getItem("pokemons");
+    storedData ? favourites=JSON.parse(storedData) : favourites=[];
     let match=pokemons.find(pokemon=>pokemon.name==e.target.id);
     favourites.some(pokemon=>pokemon.name==match.name) ? deletePokemonFav(match) : favourites.push(match);
     localStorage.setItem("pokemons", JSON.stringify(favourites));
